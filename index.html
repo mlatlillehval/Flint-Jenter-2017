@@ -683,7 +683,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 <!-- SPLASH SCREEN -->
 <audio id="lagsang" src="Flint_2017_sang.mp3" preload="none"></audio>
 <div class="splash" id="splash">
-  <img class="splash-logo" src="/images/gallery_01.png" alt="Flint">
+  <img class="splash-logo" src="/gallery_01.png" alt="Flint">
   <div class="splash-title">Flint Jenter 2017</div>
   <div class="splash-sub">Sesong 2026</div>
   <button class="splash-btn" onclick="enterSite()">
@@ -694,7 +694,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 
 <header class="top-header">
   <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-  <img src="/images/gallery_02.png" alt="Flint" onclick="showPage('laget')" style="cursor:pointer;">
+  <img src="/gallery_02.png" alt="Flint" onclick="showPage('laget')" style="cursor:pointer;">
   <div onclick="showPage('laget')" style="cursor:pointer;">
     <div class="top-header-title">Flint Jenter 2017</div>
     <div class="top-header-sub">Sesong 2026</div>
@@ -725,7 +725,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
       <div class="flint-slogan">Samhold · Stolthet · Glede</div>
     </div>
     <div class="lillehval-footer">
-      <img src="/images/gallery_03.svg" alt="Lillehval logo">
+      <img src="/gallery_03.svg" alt="Lillehval logo">
       <div class="lillehval-footer-text">
         Lagside laget av din AI-partner<br>
         <a href="https://www.lillehval.no" target="_blank">www.lillehval.no</a>
@@ -1793,7 +1793,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 
 <script>
 // ===== DATA (declared once) =====
-const IMGS = {"Mathea": "/images/imgs_mathea.jpg", "Helle": "/images/imgs_helle.jpg", "Belize": "/images/imgs_belize.jpg", "Fride": "/images/imgs_fride.jpg", "Thea": "/images/imgs_thea.jpg", "Ingrid": "/images/imgs_ingrid.jpg", "Klara": "/images/imgs_klara.jpg", "Maria": "/images/imgs_maria.jpg", "Cornelia": "/images/imgs_cornelia.jpg", "Hennie": "/images/imgs_hennie.jpg", "OdaJ": "/images/imgs_odaj.jpg", "OdaB": "/images/imgs_odab.jpg", "logo": "/images/imgs_logo.png"};
+const IMGS = {"Mathea": "/imgs_mathea.jpg", "Helle": "/imgs_helle.jpg", "Belize": "/imgs_belize.jpg", "Fride": "/imgs_fride.jpg", "Thea": "/imgs_thea.jpg", "Ingrid": "/imgs_ingrid.jpg", "Klara": "/imgs_klara.jpg", "Maria": "/imgs_maria.jpg", "Cornelia": "/imgs_cornelia.jpg", "Hennie": "/imgs_hennie.jpg", "OdaJ": "/imgs_odaj.jpg", "OdaB": "/imgs_odab.jpg", "logo": "/imgs_logo.png"};
 
 const playerImgKey = {
   "Mathea": "Mathea", "Helle": "Helle", "Oda J": "OdaJ", "Belize": "Belize",
@@ -1802,34 +1802,34 @@ const playerImgKey = {
 };
 
 const SPILLERKORT = {
-  "Alma T-Jullum": {"navn": "Alma T-Jullum", "bursdag": "8. juli", "pos": "Midtbane", "superkraft": "Kanonskudd", "maal": "Spille mange kamper!", "nummer": "3", "bamse": "Mikkel", "mat": "Pannekaker", "type": "spiller", "img": "/images/kort_alma_t_jullum.jpg"},
-  "Andreas Læff Bra then": {"navn": "Andreas Læff Bråthen", "bursdag": "12. august", "pos": "Forsvar", "superkraft": "Løvemanke", "maal": "Heie mye på jentene!", "nummer": "13", "bamse": "Bamse", "mat": "Kjøttkaker", "type": "trener", "img": "/images/kort_andreas_laeff_brathen.jpg"},
-  "Aylin Asad Mosa": {"navn": "Aylin Asad Mosa", "bursdag": "15. juni", "pos": "Angrep", "superkraft": "Presise skudd", "maal": "Ha det gøy!", "nummer": "8", "bamse": "Bamsi", "mat": "Pannekaker", "type": "spiller", "img": "/images/kort_aylin_asad_mosa.jpg"},
-  "Bamsi": {"navn": "Bamsi", "bursdag": "1. april", "pos": "Potet", "superkraft": "Supersterk", "maal": "Feire alle mål", "nummer": "6", "bamse": "Alle på laget 💙", "mat": "Seiers-is", "type": "maskot", "img": "/images/kort_bamsi.jpg"},
-  "Belize Markeng Holmen": {"navn": "Belize Markeng Holmen", "bursdag": "23. mars", "pos": "Potet", "superkraft": "Driblemester", "maal": "Å komme på TV", "nummer": "23", "bamse": "Kanini", "mat": "Pizza", "type": "spiller", "img": "/images/kort_belize_markeng_holmen.jpg"},
-  "Cornelia Kirsebom": {"navn": "Cornelia Kirsebom", "bursdag": "14. april", "pos": "Angrep", "superkraft": "Lyntog", "maal": "Seriegull med laget", "nummer": "10", "bamse": "Vovve", "mat": "Pizza", "type": "spiller", "img": "/images/kort_cornelia_kirsebom.jpg"},
-  "Emelina H-Larsen": {"navn": "Emelina H-Larsen", "bursdag": "29. august", "pos": "Forsvar", "superkraft": "En som aldri gir opp", "maal": "Å kunne drible", "nummer": "8", "bamse": "Hjerteputen min", "mat": "Sushi", "type": "spiller", "img": "/images/kort_emelina_h_larsen.jpg"},
-  "Fredrik H Langlete": {"navn": "Fredrik H. Langlete", "bursdag": "23. januar", "pos": "Midtbane", "superkraft": "Rakettfart", "maal": "Ha det supergøy!", "nummer": "6", "bamse": "Donald Duck", "mat": "Fjordland", "type": "trener", "img": "/images/kort_fredrik_h_langlete.jpg"},
-  "Fride Langsrud": {"navn": "Fride Langsrud", "bursdag": "26. juli", "pos": "Midtbane", "superkraft": "Gledesspreder", "maal": "Bli god på å finte", "nummer": "8", "bamse": "Bolla og Pingu", "mat": "Sushi", "type": "spiller", "img": "/images/kort_fride_langsrud.jpg"},
-  "Helle B Kristiansen": {"navn": "Helle B. Kristiansen", "bursdag": "11. april", "pos": "Angrep", "superkraft": "En som aldri gir opp", "maal": "Bli driblemester", "nummer": "8", "bamse": "Luna", "mat": "Reker og loff", "type": "spiller", "img": "/images/kort_helle_b_kristiansen.jpg"},
-  "Hennie Gjelstad": {"navn": "Hennie Gjelstad", "bursdag": "4. mars", "pos": "Keeper", "superkraft": "Superkeeper", "maal": "Bli en god keeper", "nummer": "10", "bamse": "Squishmallows", "mat": "Sushi og taco", "type": "spiller", "img": "/images/kort_hennie_gjelstad.jpg"},
-  "Iben D Fosvold": {"navn": "Iben D. Fosvold", "bursdag": "9. august", "pos": "Midtbane", "superkraft": "Kanonskudd", "maal": "Score 3 mål", "nummer": "8", "bamse": "Cuity", "mat": "Pizza", "type": "spiller", "img": "/images/kort_iben_d_fosvold.jpg"},
-  "Iben S-Pettersen": {"navn": "Iben S.-Pettersen", "bursdag": "30. januar", "pos": "Angrep", "superkraft": "En som aldri gir opp", "maal": "Score mange mål!", "nummer": "2", "bamse": "Sniff", "mat": "Pho", "type": "spiller", "img": "/images/kort_iben_s_pettersen.jpg"},
-  "Ingrid B Sundvoll": {"navn": "Ingrid B. Sundvoll", "bursdag": "22. januar", "pos": "Midtbane", "superkraft": "Lyntog", "maal": "Bli bedre til å finte", "nummer": "6", "bamse": "Bamse", "mat": "Tomat/grønnsakssuppe", "type": "spiller", "img": "/images/kort_ingrid_b_sundvoll.jpg"},
-  "Ingrid S Nicolaisen": {"navn": "Ingrid S. Nicolaisen", "bursdag": "29. mai", "pos": "Forsvar", "superkraft": "En som aldri gir opp", "maal": "Bli bedre på å drible", "nummer": "9", "bamse": "Kaninen Peter", "mat": "Fiskegrateng og pizza", "type": "spiller", "img": "/images/kort_ingrid_s_nicolaisen.jpg"},
-  "Jan-Øyvind Kirsebom": {"navn": "Jan-Øyvind Kirsebom", "bursdag": "5. januar", "pos": "Forsvar", "superkraft": "Usynlig lagstrikk", "maal": "Få samhold i gruppa", "nummer": "3", "bamse": "Bamsefar", "mat": "Chili con carne", "type": "trener", "img": "/images/kort_jan_oyvind_kirsebom.jpg"},
-  "Klara H Joranger": {"navn": "Klara H. Joranger", "bursdag": "22. juni", "pos": "Midtbane", "superkraft": "En som aldri gir opp", "maal": "Lære noe nytt", "nummer": "7", "bamse": "Snøball og Silke", "mat": "Pizza", "type": "spiller", "img": "/images/kort_klara_h_joranger.jpg"},
-  "Magnus Skontorp": {"navn": "Magnus Skontorp", "bursdag": "31. juli", "pos": "Midtbane", "superkraft": "Lagets fighter", "maal": "Følge Flints verdier", "nummer": "23", "bamse": "Bamsi", "mat": "Biff", "type": "trener", "img": "/images/kort_magnus_skontorp.jpg"},
-  "Mari Sundt-Schwebs": {"navn": "Mari Sundt-Schwebs", "bursdag": "5. april", "pos": "Angrep", "superkraft": "Takledronning", "maal": "Score mange mål", "nummer": "9", "bamse": "Bamsi", "mat": "Sushi", "type": "spiller", "img": "/images/kort_mari_sundt_schwebs.jpg"},
-  "Maria H Skontorp": {"navn": "Maria H. Skontorp", "bursdag": "28. desember", "pos": "Angrep", "superkraft": "Innsats og press", "maal": "Vinne og samarbeide", "nummer": "7", "bamse": "Bamsi", "mat": "Pizza", "type": "spiller", "img": "/images/kort_maria_h_skontorp.jpg"},
-  "Marius Langsrud": {"navn": "Marius Langsrud", "bursdag": "27. januar", "pos": "Angrep", "superkraft": "Skarpskytter", "maal": "Fotball > smågodt", "nummer": "67", "bamse": "Flode", "mat": "Butter chicken", "type": "trener", "img": "/images/kort_marius_langsrud.jpg"},
-  "Mathea H Langlete": {"navn": "Mathea H. Langlete", "bursdag": "25. februar", "pos": "Forsvar", "superkraft": "Lagets fighter", "maal": "Ha det gøy!", "nummer": "8", "bamse": "Teddy", "mat": "Kyllingvinger", "type": "spiller", "img": "/images/kort_mathea_h_langlete.jpg"},
-  "Mille Austad-Roser": {"navn": "Mille Austad-Roser", "bursdag": "14. februar", "pos": "Angrep", "superkraft": "Takledronning", "maal": "Score flere mål", "nummer": "10", "bamse": "Bamsi", "mat": "Sushi", "type": "spiller", "img": "/images/kort_mille_austad_roser.jpg"},
-  "Oda Brathen v6": {"navn": "Oda Bråthen", "bursdag": "14. mai", "pos": "Midtbane", "superkraft": "Fintekunstner", "maal": "Vinne mer!", "nummer": "14", "bamse": "Fofadei og Kuku", "mat": "Pasta carbonara", "type": "spiller", "img": "/images/kort_oda_brathen.jpg"},
-  "Oda Hørthe Jacobsen": {"navn": "Oda Hørthe Jacobsen", "bursdag": "25. september", "pos": "Potet", "superkraft": "Lagets fighter", "maal": "Bli god til å presse", "nummer": "10", "bamse": "Lea", "mat": "Sushi", "type": "spiller", "img": "/images/kort_oda_horthe_jacobsen.jpg"},
-  "Sofie M G Bjørneseth": {"navn": "Sofie M G Bjørneseth", "bursdag": "15. september", "pos": "Potet", "superkraft": "En som aldri gir opp", "maal": "Ha det gøy", "nummer": "5", "bamse": "Fantasidyr", "mat": "Nuggets", "type": "spiller", "img": "/images/kort_sofie_m_g_bjorneseth.jpg"},
-  "Thea Langsrud": {"navn": "Thea Langsrud", "bursdag": "26. juli", "pos": "Angrep", "superkraft": "Supersterk", "maal": "Score ett mål", "nummer": "8", "bamse": "Nissi", "mat": "Crispy chicken burger", "type": "spiller", "img": "/images/kort_thea_langsrud.jpg"},
-  "Lagbilde": {"type": "special", "img": "/images/lagbilde.jpg"}
+  "Alma T-Jullum": {"navn": "Alma T-Jullum", "bursdag": "8. juli", "pos": "Midtbane", "superkraft": "Kanonskudd", "maal": "Spille mange kamper!", "nummer": "3", "bamse": "Mikkel", "mat": "Pannekaker", "type": "spiller", "img": "/kort_alma_t_jullum.jpg"},
+  "Andreas Læff Bra then": {"navn": "Andreas Læff Bråthen", "bursdag": "12. august", "pos": "Forsvar", "superkraft": "Løvemanke", "maal": "Heie mye på jentene!", "nummer": "13", "bamse": "Bamse", "mat": "Kjøttkaker", "type": "trener", "img": "/kort_andreas_laeff_brathen.jpg"},
+  "Aylin Asad Mosa": {"navn": "Aylin Asad Mosa", "bursdag": "15. juni", "pos": "Angrep", "superkraft": "Presise skudd", "maal": "Ha det gøy!", "nummer": "8", "bamse": "Bamsi", "mat": "Pannekaker", "type": "spiller", "img": "/kort_aylin_asad_mosa.jpg"},
+  "Bamsi": {"navn": "Bamsi", "bursdag": "1. april", "pos": "Potet", "superkraft": "Supersterk", "maal": "Feire alle mål", "nummer": "6", "bamse": "Alle på laget 💙", "mat": "Seiers-is", "type": "maskot", "img": "/kort_bamsi.jpg"},
+  "Belize Markeng Holmen": {"navn": "Belize Markeng Holmen", "bursdag": "23. mars", "pos": "Potet", "superkraft": "Driblemester", "maal": "Å komme på TV", "nummer": "23", "bamse": "Kanini", "mat": "Pizza", "type": "spiller", "img": "/kort_belize_markeng_holmen.jpg"},
+  "Cornelia Kirsebom": {"navn": "Cornelia Kirsebom", "bursdag": "14. april", "pos": "Angrep", "superkraft": "Lyntog", "maal": "Seriegull med laget", "nummer": "10", "bamse": "Vovve", "mat": "Pizza", "type": "spiller", "img": "/kort_cornelia_kirsebom.jpg"},
+  "Emelina H-Larsen": {"navn": "Emelina H-Larsen", "bursdag": "29. august", "pos": "Forsvar", "superkraft": "En som aldri gir opp", "maal": "Å kunne drible", "nummer": "8", "bamse": "Hjerteputen min", "mat": "Sushi", "type": "spiller", "img": "/kort_emelina_h_larsen.jpg"},
+  "Fredrik H Langlete": {"navn": "Fredrik H. Langlete", "bursdag": "23. januar", "pos": "Midtbane", "superkraft": "Rakettfart", "maal": "Ha det supergøy!", "nummer": "6", "bamse": "Donald Duck", "mat": "Fjordland", "type": "trener", "img": "/kort_fredrik_h_langlete.jpg"},
+  "Fride Langsrud": {"navn": "Fride Langsrud", "bursdag": "26. juli", "pos": "Midtbane", "superkraft": "Gledesspreder", "maal": "Bli god på å finte", "nummer": "8", "bamse": "Bolla og Pingu", "mat": "Sushi", "type": "spiller", "img": "/kort_fride_langsrud.jpg"},
+  "Helle B Kristiansen": {"navn": "Helle B. Kristiansen", "bursdag": "11. april", "pos": "Angrep", "superkraft": "En som aldri gir opp", "maal": "Bli driblemester", "nummer": "8", "bamse": "Luna", "mat": "Reker og loff", "type": "spiller", "img": "/kort_helle_b_kristiansen.jpg"},
+  "Hennie Gjelstad": {"navn": "Hennie Gjelstad", "bursdag": "4. mars", "pos": "Keeper", "superkraft": "Superkeeper", "maal": "Bli en god keeper", "nummer": "10", "bamse": "Squishmallows", "mat": "Sushi og taco", "type": "spiller", "img": "/kort_hennie_gjelstad.jpg"},
+  "Iben D Fosvold": {"navn": "Iben D. Fosvold", "bursdag": "9. august", "pos": "Midtbane", "superkraft": "Kanonskudd", "maal": "Score 3 mål", "nummer": "8", "bamse": "Cuity", "mat": "Pizza", "type": "spiller", "img": "/kort_iben_d_fosvold.jpg"},
+  "Iben S-Pettersen": {"navn": "Iben S.-Pettersen", "bursdag": "30. januar", "pos": "Angrep", "superkraft": "En som aldri gir opp", "maal": "Score mange mål!", "nummer": "2", "bamse": "Sniff", "mat": "Pho", "type": "spiller", "img": "/kort_iben_s_pettersen.jpg"},
+  "Ingrid B Sundvoll": {"navn": "Ingrid B. Sundvoll", "bursdag": "22. januar", "pos": "Midtbane", "superkraft": "Lyntog", "maal": "Bli bedre til å finte", "nummer": "6", "bamse": "Bamse", "mat": "Tomat/grønnsakssuppe", "type": "spiller", "img": "/kort_ingrid_b_sundvoll.jpg"},
+  "Ingrid S Nicolaisen": {"navn": "Ingrid S. Nicolaisen", "bursdag": "29. mai", "pos": "Forsvar", "superkraft": "En som aldri gir opp", "maal": "Bli bedre på å drible", "nummer": "9", "bamse": "Kaninen Peter", "mat": "Fiskegrateng og pizza", "type": "spiller", "img": "/kort_ingrid_s_nicolaisen.jpg"},
+  "Jan-Øyvind Kirsebom": {"navn": "Jan-Øyvind Kirsebom", "bursdag": "5. januar", "pos": "Forsvar", "superkraft": "Usynlig lagstrikk", "maal": "Få samhold i gruppa", "nummer": "3", "bamse": "Bamsefar", "mat": "Chili con carne", "type": "trener", "img": "/kort_jan_oyvind_kirsebom.jpg"},
+  "Klara H Joranger": {"navn": "Klara H. Joranger", "bursdag": "22. juni", "pos": "Midtbane", "superkraft": "En som aldri gir opp", "maal": "Lære noe nytt", "nummer": "7", "bamse": "Snøball og Silke", "mat": "Pizza", "type": "spiller", "img": "/kort_klara_h_joranger.jpg"},
+  "Magnus Skontorp": {"navn": "Magnus Skontorp", "bursdag": "31. juli", "pos": "Midtbane", "superkraft": "Lagets fighter", "maal": "Følge Flints verdier", "nummer": "23", "bamse": "Bamsi", "mat": "Biff", "type": "trener", "img": "/kort_magnus_skontorp.jpg"},
+  "Mari Sundt-Schwebs": {"navn": "Mari Sundt-Schwebs", "bursdag": "5. april", "pos": "Angrep", "superkraft": "Takledronning", "maal": "Score mange mål", "nummer": "9", "bamse": "Bamsi", "mat": "Sushi", "type": "spiller", "img": "/kort_mari_sundt_schwebs.jpg"},
+  "Maria H Skontorp": {"navn": "Maria H. Skontorp", "bursdag": "28. desember", "pos": "Angrep", "superkraft": "Innsats og press", "maal": "Vinne og samarbeide", "nummer": "7", "bamse": "Bamsi", "mat": "Pizza", "type": "spiller", "img": "/kort_maria_h_skontorp.jpg"},
+  "Marius Langsrud": {"navn": "Marius Langsrud", "bursdag": "27. januar", "pos": "Angrep", "superkraft": "Skarpskytter", "maal": "Fotball > smågodt", "nummer": "67", "bamse": "Flode", "mat": "Butter chicken", "type": "trener", "img": "/kort_marius_langsrud.jpg"},
+  "Mathea H Langlete": {"navn": "Mathea H. Langlete", "bursdag": "25. februar", "pos": "Forsvar", "superkraft": "Lagets fighter", "maal": "Ha det gøy!", "nummer": "8", "bamse": "Teddy", "mat": "Kyllingvinger", "type": "spiller", "img": "/kort_mathea_h_langlete.jpg"},
+  "Mille Austad-Roser": {"navn": "Mille Austad-Roser", "bursdag": "14. februar", "pos": "Angrep", "superkraft": "Takledronning", "maal": "Score flere mål", "nummer": "10", "bamse": "Bamsi", "mat": "Sushi", "type": "spiller", "img": "/kort_mille_austad_roser.jpg"},
+  "Oda Brathen v6": {"navn": "Oda Bråthen", "bursdag": "14. mai", "pos": "Midtbane", "superkraft": "Fintekunstner", "maal": "Vinne mer!", "nummer": "14", "bamse": "Fofadei og Kuku", "mat": "Pasta carbonara", "type": "spiller", "img": "/kort_oda_brathen.jpg"},
+  "Oda Hørthe Jacobsen": {"navn": "Oda Hørthe Jacobsen", "bursdag": "25. september", "pos": "Potet", "superkraft": "Lagets fighter", "maal": "Bli god til å presse", "nummer": "10", "bamse": "Lea", "mat": "Sushi", "type": "spiller", "img": "/kort_oda_horthe_jacobsen.jpg"},
+  "Sofie M G Bjørneseth": {"navn": "Sofie M G Bjørneseth", "bursdag": "15. september", "pos": "Potet", "superkraft": "En som aldri gir opp", "maal": "Ha det gøy", "nummer": "5", "bamse": "Fantasidyr", "mat": "Nuggets", "type": "spiller", "img": "/kort_sofie_m_g_bjorneseth.jpg"},
+  "Thea Langsrud": {"navn": "Thea Langsrud", "bursdag": "26. juli", "pos": "Angrep", "superkraft": "Supersterk", "maal": "Score ett mål", "nummer": "8", "bamse": "Nissi", "mat": "Crispy chicken burger", "type": "spiller", "img": "/kort_thea_langsrud.jpg"},
+  "Lagbilde": {"type": "special", "img": "/lagbilde.jpg"}
 };
 
 const PLAYERS = [
@@ -2169,21 +2169,21 @@ function openImgFullscreen(src, name) {
 
 
 const GALLERY = [
-  {src:"/images/gallery_45.jpg",caption:"Alle jenter på banen"},
-  {src:"/images/gallery_46.jpg",caption:"Alle jenter på banen"},
-  {src:"/images/gallery_47.jpg",caption:"Pizza etter kamp"},
-  {src:"/images/gallery_48.jpg",caption:"Medalje"},
-  {src:"/images/gallery_49.jpg",caption:"Alle jenter på banen"},
-  {src:"/images/gallery_50.jpg",caption:"Premiepodium"},
-  {src:"/images/gallery_51.jpg",caption:"Feiring etter seier"},
-  {src:"/images/gallery_52.jpg",caption:"Lagsamling i skogen"},
-  {src:"/images/gallery_53.jpg",caption:"Hoppeslott på cup"},
-  {src:"/images/gallery_54.jpg",caption:"Lagbilde vinterkamp"},
-  {src:"/images/gallery_55.jpg",caption:"Pokalseremoni"},
-  {src:"/images/gallery_56.jpg",caption:"Baneplan"},
-  {src:"/images/gallery_57.jpg",caption:"Treningsprat"},
-  {src:"/images/gallery_58.jpg",caption:"Cupbilde med pokal"},
-  {src:"/images/gallery_59.jpg",caption:"Stag Meny Cup"}
+  {src:"/gallery_45.jpg",caption:"Alle jenter på banen"},
+  {src:"/gallery_46.jpg",caption:"Alle jenter på banen"},
+  {src:"/gallery_47.jpg",caption:"Pizza etter kamp"},
+  {src:"/gallery_48.jpg",caption:"Medalje"},
+  {src:"/gallery_49.jpg",caption:"Alle jenter på banen"},
+  {src:"/gallery_50.jpg",caption:"Premiepodium"},
+  {src:"/gallery_51.jpg",caption:"Feiring etter seier"},
+  {src:"/gallery_52.jpg",caption:"Lagsamling i skogen"},
+  {src:"/gallery_53.jpg",caption:"Hoppeslott på cup"},
+  {src:"/gallery_54.jpg",caption:"Lagbilde vinterkamp"},
+  {src:"/gallery_55.jpg",caption:"Pokalseremoni"},
+  {src:"/gallery_56.jpg",caption:"Baneplan"},
+  {src:"/gallery_57.jpg",caption:"Treningsprat"},
+  {src:"/gallery_58.jpg",caption:"Cupbilde med pokal"},
+  {src:"/gallery_59.jpg",caption:"Stag Meny Cup"}
 ];
 
 let lightboxIdx = 0;
