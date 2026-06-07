@@ -662,10 +662,14 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
   .mobile-menu-btn { display: block; }
   .sidebar-backdrop { display: none; position: fixed; inset: 0; top: 52px; background: rgba(0,0,0,0.4); z-index: 54; }
   .sidebar-backdrop.open { display: block; }
-  .app-body { display: block; }
-  .main-content { width: 100%; overflow-y: visible; }
-  .page.active { overflow-y: visible; }
-  body { overflow-y: auto; }
+  /* Override desktop flex/overflow constraints */
+  .app-body { display: block !important; height: auto !important; overflow: visible !important; }
+  .main-content { display: block !important; width: 100% !important; height: auto !important; overflow-y: visible !important; }
+  .page.active { display: block !important; overflow-y: visible !important; }
+  /* Let the window scroll naturally */
+  html, body { height: auto !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch; }
+  /* Add bottom padding for the lagsang bar */
+  .page.active { padding-bottom: 70px; }
 }
 @media (min-width: 641px) {
   .profile-overlay { align-items: center; }
