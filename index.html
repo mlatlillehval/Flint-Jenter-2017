@@ -2601,11 +2601,24 @@ function karusellSetImage(src) {
   const next = karusellFront === 'a' ? imgB : imgA;
   const curr = karusellFront === 'a' ? imgA : imgB;
 
-  next.src = '/' + src;
+  // Preload next image then crossfade
+  next.style.transition = 'none';
   next.style.opacity = '0';
-  void next.offsetWidth;
-  next.style.opacity = '1';
-  curr.style.opacity = '0';
+  next.src = '/' + src;
+  next.onload = () => {
+    next.style.transition = 'opacity 0.6s ease';
+    next.style.opacity = '1';
+    curr.style.transition = 'opacity 0.6s ease';
+    curr.style.opacity = '0';
+  };
+  // Fallback if already cached
+  if (next.complete && next.naturalWidth) {
+    next.style.transition = 'opacity 0.6s ease';
+    next.style.opacity = '1';
+    curr.style.transition = 'opacity 0.6s ease';
+    curr.style.opacity = '0';
+  }
+
   karusellFront = karusellFront === 'a' ? 'b' : 'a';
 
   if (overlay) {
@@ -2624,15 +2637,16 @@ function karusellSetImage(src) {
 }
 
 function startKarusell() {
-  if (karusellActive) return;
+  // Always clear any existing timer first to prevent duplicates
+  if (karusellTimer) { clearInterval(karusellTimer); karusellTimer = null; }
   karusellActive = true;
-  karusellIdx = 0;
   karusellFront = 'a';
   const imgA = document.getElementById('karusell-img-a');
   const imgB = document.getElementById('karusell-img-b');
-  if (imgA) { imgA.style.opacity = '1'; }
-  if (imgB) { imgB.style.opacity = '0'; }
-  karusellSetImage(KARUSELL_IMGS[0]);
+  if (imgA) { imgA.style.opacity = '1'; imgA.style.transition = 'opacity 0.6s ease'; }
+  if (imgB) { imgB.style.opacity = '0'; imgB.style.transition = 'opacity 0.6s ease'; }
+  // Don't reset index if already running — continue from where we are
+  karusellSetImage(KARUSELL_IMGS[karusellIdx]);
   karusellTimer = setInterval(() => {
     karusellIdx = (karusellIdx + 1) % KARUSELL_IMGS.length;
     karusellSetImage(KARUSELL_IMGS[karusellIdx]);
