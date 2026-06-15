@@ -1595,7 +1595,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
                 <span class="bday-name">Aylin Asad Mosa</span>
                 <span class="bday-type-icon">⚽</span>
               </div>
-              <span class="bday-badge upcoming">Om 8 dager</span>
             </div>
             <div class="bday-item">
               <div class="bday-day">22</div>
@@ -1603,7 +1602,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
                 <span class="bday-name">Klara H. Joranger</span>
                 <span class="bday-type-icon">⚽</span>
               </div>
-              <span class="bday-badge upcoming">Om 15 dager</span>
             </div>
           </div>
         </div>
@@ -2780,12 +2778,62 @@ function lukkGalleriGate() {
   document.getElementById('galleriGate').style.display = 'none';
 }
 
+function daysUntilBirthday(month, day) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  let next = new Date(today.getFullYear(), month - 1, day);
+  if (next < today) {
+    next = new Date(today.getFullYear() + 1, month - 1, day);
+  }
+  return Math.round((next - today) / 86400000);
+}
+
+function updateBursdagBadges() {
+  const MONTHS = {
+    'januar': 1, 'februar': 2, 'mars': 3, 'april': 4,
+    'mai': 5, 'juni': 6, 'juli': 7, 'august': 8,
+    'september': 9, 'oktober': 10, 'november': 11, 'desember': 12
+  };
+
+  document.querySelectorAll('#page-bursdager .bday-month-group').forEach(group => {
+    const month = MONTHS[group.querySelector('.bday-month-label').textContent.trim().toLowerCase()];
+    if (!month) return;
+
+    group.querySelectorAll('.bday-item').forEach(item => {
+      item.querySelector('.bday-badge')?.remove();
+      const day = parseInt(item.querySelector('.bday-day').textContent.trim(), 10);
+      if (!day) return;
+
+      const days = daysUntilBirthday(month, day);
+      if (days > 30) return;
+
+      const badge = document.createElement('span');
+      badge.className = 'bday-badge';
+      if (days === 0) {
+        badge.classList.add('today');
+        badge.textContent = 'I dag!';
+      } else if (days === 1) {
+        badge.classList.add('soon');
+        badge.textContent = 'I morgen';
+      } else if (days <= 7) {
+        badge.classList.add('soon');
+        badge.textContent = 'Om ' + days + ' dager';
+      } else {
+        badge.classList.add('upcoming');
+        badge.textContent = 'Om ' + days + ' dager';
+      }
+      item.appendChild(badge);
+    });
+  });
+}
+
 // ===== INIT =====
 buildPlayerList();
 buildGallery();
 initSang();
 buildTrenerList();
 buildMaskot();
+updateBursdagBadges();
 // Mark karusell entry as selected by default and start it
 const karListItem = document.getElementById('karusellListItem');
 if (karListItem) karListItem.classList.add('selected');
